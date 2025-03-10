@@ -21,6 +21,17 @@ dependencies {
     // (in a separate module for demo project and in testMain).
     // With compose.desktop.common you will also lose @Preview functionality
     implementation(compose.desktop.currentOs)
+    val ktorVersion = "3.1.0"
+    // Ktor-core
+    implementation("io.ktor:ktor-client-core:${ktorVersion}")
+    // Logging
+    implementation("io.ktor:ktor-client-logging:${ktorVersion}")
+    implementation("ch.qos.logback:logback-classic:1.4.12")
+    // Negotiation
+    implementation("io.ktor:ktor-client-serialization:$ktorVersion") // 序列化支持
+    implementation("io.ktor:ktor-client-content-negotiation:${ktorVersion}")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:${ktorVersion}")
+    implementation("io.ktor:ktor-client-cio:${ktorVersion}")
 }
 
 compose.desktop {
