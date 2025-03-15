@@ -30,18 +30,18 @@ val httpClient = HttpClient(CIO) {
             protocol = URLProtocol.HTTPS
             host = BASE_URL
         }
-        val now = System.currentTimeMillis().toString()
-        headers {
-            append("Content-Type", "application/Json")
-            append("Accept", "application/Json")
-            append("x-bili-content-md5", "contentMd5Value")
-            append("x-bili-timestamp", now)
-            append("x-bili-signature-method", "HMAC-SHA256")
-            append("x-bili-signature-nonce", now)
-            append("x-bili-accesskeyid", ACCESS_KEY_ID_VALUE)
-            append("x-bili-signature-version", "1.0")
-            append("Authorization", "encryptStr")
-        }
+//        val now = System.currentTimeMillis().toString()
+//        headers {
+//            append("Content-Type", "application/Json")
+//            append("Accept", "application/Json")
+////            append("x-bili-content-md5", "contentMd5Value")
+//            append("x-bili-timestamp", now)
+//            append("x-bili-signature-method", "HMAC-SHA256")
+//            append("x-bili-signature-nonce", now)
+//            append("x-bili-accesskeyid", ACCESS_KEY_ID_VALUE)
+//            append("x-bili-signature-version", "1.0")
+////            append("Authorization", "encryptStr")
+//        }
     }
 
     install(Logging) {
