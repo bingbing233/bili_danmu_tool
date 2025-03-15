@@ -18,6 +18,7 @@ fun App() {
     MaterialTheme {
         Button(onClick = {
             text = "Hello, Desktop!"
+            MainViewModel.start()
         }) {
             Text(text)
         }

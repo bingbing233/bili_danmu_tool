@@ -58,9 +58,4 @@ val httpClient = HttpClient(CIO) {
             ignoreUnknownKeys = true
         })
     }
-
-    install(HttpSend) {
-    }
-
-
 }
